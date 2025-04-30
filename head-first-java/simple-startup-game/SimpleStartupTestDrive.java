@@ -1,39 +1,9 @@
-class SimpleStartup {
-    private int[] locationCells;
-    private int numberOfHits = 0;
-
-    public void setLocationCells(int[] locs){
-        locationCells = locs;
-    }
-
-    
-    public String checkYourself(int guess){
-        String result = "miss";
-
-        for(int cell: locationCells){
-            if(guess == cell){
-                result = "hit";
-                numberOfHits++;
-                break;
-            }
-        }
-
-        if(numberOfHits == locationCells.length){
-            result = "kill";
-        }
-
-        System.out.println(result);
-
-        return result;
-    }
-}
-
 public class SimpleStartupTestDrive {
     public static void main(String[] args){
         SimpleStartup dot = new SimpleStartup();
 
         int[] locations = {2,3,4};
-        dot.setLocationCells(locations);
+        dot.setLocations(locations);
 
         int userGuess = 2;
         String result = dot.checkYourself(userGuess);
