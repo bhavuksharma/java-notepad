@@ -1,23 +1,23 @@
 public class SimpleStartup{
-    private int[] startUpLocations;
+    private int[] locationCells;
     private int numOfHits = 0;
 
     public void setLocations(int[] locations){
-        startUpLocations = locations;
+        locationCells = locations;
     }
 
     public String checkYourself(int guess){
         String result = "miss";
 
-        for(int value : startUpLocations){
-            if(guess == value){
+        for(int cell : locationCells){
+            if(guess == cell){
                 numOfHits++;
                 result = "hit";
                 break;
             }
         }
 
-        if(numOfHits == startUpLocations.length){
+        if(numOfHits == locationCells.length){
             result = "kill";
         }
 
