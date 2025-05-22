@@ -5,7 +5,7 @@ public class Loppy{
 		int x = 1;
 		System.out.println("Before the loop");
 		
-		while(x < 5){
+		while(x < 10){
 			System.out.println("Into the loop");
 			System.out.println("value of x: " + x);
 			x++;
